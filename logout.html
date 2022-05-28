@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<title>Internet hotspot - Cerrar Sesion</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+    function openLogin() {
+      if (window.name != 'hotspot_logout') return true;
+      open('$(link-login)', '_blank', '');
+      window.close();
+      return false;
+    }
+</script>
+</head>
+
+<body>
+    <div class="ie-fixMinHeight">
+        <div class="main">
+            <div class="wrap">
+                <h1>Te has desconectado.</h1>
+                <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                <input type="submit" value="Acceder">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
